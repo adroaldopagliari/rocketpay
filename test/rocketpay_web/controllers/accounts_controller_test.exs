@@ -29,7 +29,7 @@ defmodule RocketpayWeb.AccountsControllerTest do
       |> post(Routes.accounts_path(conn, :deposit, account_id, params))
       |> json_response(:ok)
 
-      assert %{"account" => %{"balance" => "0.00", "id" => _id}, "message" => "Balance changed successfully"} = response
+      assert %{"account" => %{"balance" => "50.00", "id" => _id}, "message" => "Balance changed successfully"} = response
     end
   end
 end
